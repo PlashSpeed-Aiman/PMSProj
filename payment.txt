@@ -1,0 +1,10 @@
+{"paymentID":"payment-2023-03-03","amount":213.0,"payeeID":"120113","paymentType":"rental","financeType":""}
+{"paymentID":"payment-2023-03-03","amount":213.0,"payeeID":"120113","paymentType":"rental","financeType":""}
+{"paymentID":"payment-2023-03-03","amount":213.0,"payeeID":"120113","paymentType":"rental","financeType":""}
+{"paymentID":"payment-2023-03-03","amount":213.0,"payeeID":"120113","paymentType":"rental","financeType":""}
+{"paymentID":"payment-2023-03-03","amount":213.0,"payeeID":"120113","paymentType":"rental","financeType":""}
+{"paymentID":"payment-2023-03-03","amount":213.0,"payeeID":"120113","paymentType":"utilities ","financeType":""}
+{"paymentID":"payment-2023-03-03-03:17:34.560929400","amount":2313.0,"payeeID":"120113","paymentType":"utilities ","financeType":""}
+{"paymentID":"payment-2023-03-03-04:53:43.936003800","amount":213.0,"payeeID":"120113","paymentType":"utilities ","financeType":""}
+{"paymentID":"payment-2023-03-03-06:38:05.199228500","amount":231.0,"payeeID":"120113","paymentType":"rental","financeType":""}
+{"paymentID":"payment-2023-03-03-09:02:33.734414600","amount":212.0,"payeeID":"120113","paymentType":"rental","financeType":""}

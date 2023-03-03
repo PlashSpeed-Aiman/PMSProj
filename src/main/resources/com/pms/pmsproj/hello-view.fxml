@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="container" alignment="CENTER" prefHeight="400.0" prefWidth="600.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pms.pmsproj.Controller.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label fx:id="welcomeText" text="Welcome to Genex PROPERTY MANAGEMENT SYSTEM (PMS)" />
+   <HBox>
+      <children>
+          <Button onAction="#onHelloButtonClick" text="Building Manager ">
+            <HBox.margin>
+               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </HBox.margin>
+            <padding>
+               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+         </Button>
+          <Button onAction="#onHelloButtonClick" text="Account Executive">
+              <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+              </HBox.margin>
+              <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+              </padding>
+          </Button>
+          <Button onAction="#onAdminButtonClicked" text="Admin Executive">
+              <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+              </HBox.margin>
+              <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+              </padding>
+          </Button>
+          <Button onAction="#onHelloButtonClick" text="Building Executive">
+              <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+              </HBox.margin>
+              <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+              </padding>
+          </Button>
+      </children>
+   </HBox>
+    <HBox alignment="CENTER">
+        <children>
+            <Button alignment="CENTER" onAction="#onResidentButtonClicked" text="Resident / Tenant">
+                <HBox.margin>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                </HBox.margin>
+                <padding>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                </padding>
+            </Button>
+            <Button alignment="CENTER" onAction="#onVendorButtonClicked" text="Vendor">
+                <HBox.margin>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                </HBox.margin>
+                <padding>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                </padding>
+            </Button>
+            <Button alignment="CENTER" onAction="#onSecurityButtonClicked" text="Security Guard">
+                <HBox.margin>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                </HBox.margin>
+                <padding>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                </padding>
+            </Button>
+            <Button alignment="CENTER" onAction="#onHelloButtonClick" text="Visitor">
+                <HBox.margin>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                </HBox.margin>
+                <padding>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                </padding>
+            </Button>
+        </children>
+    </HBox>
+</VBox>

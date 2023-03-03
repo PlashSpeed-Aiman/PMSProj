@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="container" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pms.pmsproj.Controller.GuardController.GuardManagementViewController">
+   <children>
+      <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#logoutButtonClicked" text="Logout">
+         <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
+      </Button>
+      <TabPane prefHeight="600.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Incidents">
+            <content>
+              <VBox minHeight="0.0" minWidth="0.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.5" layoutX="49.0" layoutY="-29.0" prefHeight="400.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+                           <items>
+                              <ListView fx:id="incidentListView" prefHeight="200.0" prefWidth="200.0" />
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="295.0" spacing="5.0">
+                                 <children>
+                                    <Label alignment="CENTER" text="Incident ID" />
+                                    <TextField fx:id="incidentIdField" />
+                                    <Label text="Incident Details" />
+                                    <TextField fx:id="incidentDetailsField" />
+                                    <Button mnemonicParsing="false" onAction="#recordButtonClicked" text="Record Incident" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </items></SplitPane>
+                     </children>
+                  </VBox>
+            </content>
+          </Tab>
+            <Tab text="View Visitors/Visitors Pass">
+                <content>
+                    <VBox minHeight="0.0" minWidth="0.0" prefWidth="200.0">
+                        <children>
+                              <ListView prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                        </children>
+                    </VBox>
+                </content>
+            </Tab>
+            <Tab text="Record/Update Visitors Entry">
+                <content>
+                    <VBox minHeight="0.0" minWidth="0.0" prefWidth="200.0">
+                        <children>
+                            <SplitPane dividerPositions="0.5" layoutX="49.0" layoutY="-29.0" prefHeight="400.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+                                <items>
+                                    <ListView prefHeight="200.0" prefWidth="200.0" />
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="295.0" spacing="5.0">
+                                        <children>
+                                            <Label alignment="CENTER" text="Incident ID" />
+                                            <TextField />
+                                            <Label text="Incident Details" />
+                                            <TextField />
+                                            <Button mnemonicParsing="false" onAction="#recordButtonClicked" text="Record Incident" />
+                                        </children>
+                                        <padding>
+                                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                        </padding>
+                                    </VBox>
+                                </items></SplitPane>
+                        </children>
+                    </VBox>
+                </content>
+            </Tab>
+            <Tab text="Checkpoint Check-In">
+                <content>
+                    <VBox minHeight="0.0" minWidth="0.0" prefWidth="200.0">
+                        <children>
+                            <SplitPane dividerPositions="0.5" layoutX="49.0" layoutY="-29.0" prefHeight="400.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+                                <items>
+                                    <ListView fx:id="checkPointListView" prefHeight="200.0" prefWidth="200.0" />
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="295.0" spacing="5.0">
+                                        <children>
+                                            <Label alignment="CENTER" text="Checkpoint ID" />
+                                            <TextField fx:id="checkpointIdField" />
+                                            <Label text="Checkpoint Location" />
+                                            <TextField fx:id="checkpointLocField" />
+                                    <Label text="Description" />
+                                    <TextField fx:id="checkpointDescField" />
+                                            <Button mnemonicParsing="false" onAction="#checkInButtonClicked" text="Check-In" />
+                                        </children>
+                                        <padding>
+                                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                        </padding>
+                                    </VBox>
+                                </items></SplitPane>
+                        </children>
+                    </VBox>
+                </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</VBox>

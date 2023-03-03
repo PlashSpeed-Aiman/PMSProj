@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:id="container" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pms.pmsproj.Controller.VendorController.VendorViewController">
+   <children>
+      <Button mnemonicParsing="false" onAction="#logoutButtonClicked" text="Logout">
+         <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
+      </Button>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+        <tabs>
+          <Tab text="View/Update Profile">
+            <content>
+                <GridPane  alignment="CENTER" prefHeight="500.0" prefWidth="622.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+                    <Text text="Profile" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0">
+                        <font>
+                           <Font size="24.0" />
+                        </font>
+                        <GridPane.margin>
+                           <Insets top="20.0" />
+                        </GridPane.margin></Text>
+
+                    <Label text="User Name:" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                        <GridPane.margin>
+                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                        </GridPane.margin></Label>
+
+                    <TextField fx:id="username" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                    <Label text="Password:" GridPane.rowIndex="3">
+                        <GridPane.margin>
+                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                        </GridPane.margin></Label>
+
+                    <PasswordField fx:id="password" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                    <Button mnemonicParsing="false" text="Save" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
+                    <Label fx:id="errorText" text="Enter Login Credentials" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                     <Label text="Shop ID" GridPane.rowIndex="4">
+                        <GridPane.margin>
+                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                        </GridPane.margin>
+                     </Label>
+                     <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                     <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                     <Label text="Age" GridPane.rowIndex="2">
+                        <GridPane.margin>
+                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                        </GridPane.margin>
+                     </Label>
+                    <columnConstraints>
+                        <ColumnConstraints />
+                        <ColumnConstraints />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                    </rowConstraints>
+
+                </GridPane>
+            </content>
+          </Tab>
+          <Tab text="Make Payment">
+            <content>
+                <GridPane alignment="CENTER" prefHeight="500.0" prefWidth="622.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+                    <Text text="Payment" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0">
+                        <font>
+                            <Font size="24.0" />
+                        </font></Text>
+
+                    <Label text="Type of Payment" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                        <GridPane.margin>
+                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                        </GridPane.margin></Label>
+
+                    <Label text="Amount" GridPane.rowIndex="3">
+                        <GridPane.margin>
+                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                        </GridPane.margin></Label>
+
+
+                    <Label GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                    <TextField fx:id="amountTextField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                     <ComboBox fx:id="comboBoxPaymentType" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                     <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onConfirmPaymentButtonClicked" text="Confirm Payment" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                    <columnConstraints>
+                        <ColumnConstraints />
+                        <ColumnConstraints />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                    </rowConstraints>
+
+                </GridPane>
+            </content>
+          </Tab>
+            <Tab text="View Finance Records">
+                <content>
+                    <VBox minHeight="0.0" minWidth="0.0" prefWidth="200.0">
+                        <children>
+                            <Text text="Finance Records" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+                                <font>
+                                    <Font size="24.0" />
+                                </font>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                            </Text>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                                  <ComboBox fx:id="comboBoxFinanceType">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </ComboBox>
+                              <Button mnemonicParsing="false" onAction="#onGetDataButtonClicked" text="Get Data" />
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                            <ListView fx:id="listViewFinanceRecords">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin></ListView>
+                        </children>
+                    </VBox>
+                </content>
+            </Tab>
+            <Tab text="Log/View/Delete/Update Complaints">
+                <content>
+                    <VBox minHeight="0.0" minWidth="0.0" prefWidth="200.0">
+                        <children>
+                        <SplitPane dividerPositions="0.5" prefWidth="200.0">
+                          <items>
+                                  <ListView fx:id="listviewComplaints" />
+                              <TabPane prefHeight="158.0" prefWidth="333.0" tabClosingPolicy="UNAVAILABLE">
+                                <tabs>
+                                  <Tab text="Log Complaints">
+                                    <content>
+                                        <GridPane  alignment="CENTER" prefHeight="500.0" prefWidth="622.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+
+                                            <Label text="Complaint Type" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                                                <GridPane.margin>
+                                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                </GridPane.margin></Label>
+
+                                            <TextField fx:id="newComplaintTypeField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                                            <Label text="Details" GridPane.rowIndex="3">
+                                                <GridPane.margin>
+                                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                </GridPane.margin></Label>
+
+                                            <PasswordField fx:id="newComplaintDetailsField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                            <Button mnemonicParsing="false" onAction="#onFileComplaintButtonClicked" text="File Complaint" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
+                                            <Label fx:id="errorText" text="Enter Login Credentials" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                                            <columnConstraints>
+                                                <ColumnConstraints />
+                                                <ColumnConstraints />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints />
+                                                <RowConstraints />
+                                                <RowConstraints />
+                                                <RowConstraints />
+                                                <RowConstraints />
+                                                <RowConstraints />
+                                            </rowConstraints>
+
+                                        </GridPane>
+                                    </content>
+                                  </Tab>
+                                  <Tab text="Edit Complaints">
+                                    <content>
+                                        <GridPane  alignment="CENTER" prefHeight="500.0" prefWidth="622.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+
+                                            <Label text="User Name:" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                                                <GridPane.margin>
+                                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                </GridPane.margin></Label>
+
+                                            <TextField fx:id="username" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                            <Button mnemonicParsing="false" text="Edit" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
+                                            <Label fx:id="errorText" text="Enter Login Credentials" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                                            <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                            <Label text="Age" GridPane.rowIndex="2">
+                                                <GridPane.margin>
+                                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                </GridPane.margin>
+                                            </Label>
+                                             <Button alignment="TOP_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onDeleteComplaintButtonClicked" text="Delete" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                            <columnConstraints>
+                                                <ColumnConstraints />
+                                                <ColumnConstraints />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints />
+                                                <RowConstraints />
+                                                <RowConstraints />
+                                                <RowConstraints />
+                                                <RowConstraints />
+                                                <RowConstraints />
+                                            </rowConstraints>
+
+                                        </GridPane>
+                                    </content>
+                                  </Tab>
+                                </tabs>
+                              </TabPane>
+                          </items>
+                        </SplitPane>
+                        </children>
+                    </VBox>
+                </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</VBox>
