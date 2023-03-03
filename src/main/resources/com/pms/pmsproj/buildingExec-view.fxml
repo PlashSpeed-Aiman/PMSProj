@@ -9,7 +9,6 @@
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
@@ -29,7 +28,7 @@
                <content>
                   <SplitPane dividerPositions="0.5" prefHeight="160.0" prefWidth="200.0">
                      <items>
-                        <ListView prefHeight="200.0" prefWidth="200.0" />
+                        <ListView fx:id="employeesListView1" prefHeight="200.0" prefWidth="200.0" />
                         <GridPane fx:id="" alignment="CENTER" prefHeight="500.0" prefWidth="622.0">
                            <columnConstraints>
                               <ColumnConstraints />
@@ -78,7 +77,7 @@
                                     <Insets left="10.0" />
                                  </VBox.margin>
                               </HBox>
-                              <ListView prefHeight="311.0" prefWidth="224.0" VBox.vgrow="ALWAYS" />
+                              <ListView fx:id="employeesListView" prefHeight="311.0" prefWidth="224.0" VBox.vgrow="ALWAYS" />
                            </children>
                         </VBox>
                         <GridPane fx:id="1" alignment="CENTER" prefHeight="500.0" prefWidth="622.0">
@@ -119,7 +118,7 @@
                <content>
                   <SplitPane dividerPositions="0.5" prefHeight="160.0" prefWidth="200.0">
                      <items>
-                        <ListView prefHeight="311.0" prefWidth="224.0" />
+                        <ListView fx:id="complaintsListView" prefHeight="311.0" prefWidth="224.0" />
                         <GridPane fx:id="11" alignment="CENTER" prefHeight="500.0" prefWidth="622.0">
                            <columnConstraints>
                               <ColumnConstraints />
@@ -149,11 +148,69 @@
             </Tab>
             <Tab closable="false" text="Patrolling Schedule">
                <content>
-                  <SplitPane dividerPositions="0.29797979797979796" prefHeight="160.0" prefWidth="200.0">
-                    <items>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
-                    </items>
+                  <SplitPane dividerPositions="0.5" prefHeight="160.0" prefWidth="200.0">
+                     <items>
+                        <ListView fx:id="patrolListView" prefHeight="311.0" prefWidth="224.0" />
+                        <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab text="Add Sequence">
+                                 <content>
+                                    <GridPane fx:id="12" alignment="CENTER" prefHeight="500.0" prefWidth="622.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints />
+                                          <ColumnConstraints />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints />
+                                          <RowConstraints />
+                                          <RowConstraints />
+                                          <RowConstraints />
+                                          <RowConstraints />
+                                          <RowConstraints />
+                                       </rowConstraints>
+                                       <children>
+                                          <Label text="Patrol Sequence" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                                             <GridPane.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <TextField fx:id="editEmployeeIdField1" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <Button mnemonicParsing="false" onAction="#onEditJobButtonClicked" text="Add New Patrol Sequence" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
+                                       </children>
+                                    </GridPane>
+                                 </content>
+                            </Tab>
+                            <Tab text="Edit Sequence">
+                                 <content>
+                                    <GridPane fx:id="13" alignment="CENTER" prefHeight="500.0" prefWidth="622.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints />
+                                          <ColumnConstraints />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints />
+                                          <RowConstraints />
+                                          <RowConstraints />
+                                          <RowConstraints />
+                                          <RowConstraints />
+                                          <RowConstraints />
+                                       </rowConstraints>
+                                       <children>
+                                          <Label text="Patrol Sequence" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                                             <GridPane.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <TextField fx:id="editEmployeeIdField2" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <Button mnemonicParsing="false" onAction="#onEditJobButtonClicked" text="Edit Sequence" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
+                                          <Button alignment="TOP_LEFT" mnemonicParsing="false" onAction="#onDeleteEmployee" text="Delete" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                       </children>
+                                    </GridPane>
+                                 </content>
+                            </Tab>
+                          </tabs>
+                        </TabPane>
+                     </items>
                   </SplitPane>
                </content>
             </Tab>
