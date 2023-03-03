@@ -8,3 +8,6 @@
 {"paymentID":"payment-2023-03-03-04:53:43.936003800","amount":213.0,"payeeID":"120113","paymentType":"utilities ","financeType":""}
 {"paymentID":"payment-2023-03-03-06:38:05.199228500","amount":231.0,"payeeID":"120113","paymentType":"rental","financeType":""}
 {"paymentID":"payment-2023-03-03-09:02:33.734414600","amount":212.0,"payeeID":"120113","paymentType":"rental","financeType":""}
+{"paymentID":"payment-2023-03-03-13:07:59.714731900","amount":321312.0,"payeeID":"120113","paymentType":"rental","financeType":""}
+{"paymentID":"payment-2023-03-03-15:52:34.789608100","amount":321.0,"payeeID":"120113","paymentType":"services","financeType":""}
+{"paymentID":"payment-2023-03-03-16:39:27.402262300","amount":21321.0,"payeeID":"120113","paymentType":"rental","financeType":""}

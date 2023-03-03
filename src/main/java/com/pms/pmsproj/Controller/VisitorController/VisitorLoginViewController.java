@@ -38,7 +38,7 @@ public class VisitorLoginViewController {
         vpv.setVisitor(new Visitor(username.getText(),password.getText()));
         Stage stage = (Stage) container.getScene().getWindow();
         Scene scene = new Scene(root);
-        stage.setTitle("Pass | IIUM i-Tahdeer");
+        stage.setTitle("Pass");
         stage.setScene(scene);
     }
 

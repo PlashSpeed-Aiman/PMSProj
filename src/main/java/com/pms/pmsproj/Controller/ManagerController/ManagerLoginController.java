@@ -1,4 +1,4 @@
-package com.pms.pmsproj.Controller.GuardController;
+package com.pms.pmsproj.Controller.ManagerController;
 
 import com.pms.pmsproj.HelloApplication;
 import javafx.event.ActionEvent;
@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class GuardManagementLogin {
+public class ManagerLoginController {
     @FXML
     private TextField username;
     @FXML
@@ -28,7 +28,7 @@ public class GuardManagementLogin {
             errorText.setText("Please complete all fields!");
             return;
         }
-        FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("guard-management-view.fxml"));
+        FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("manager-view.fxml"));
         Parent root = loader.load();
 //        VisitorPassViewController vpv = loader.getController();
         System.out.println(username.getText());
@@ -46,6 +46,7 @@ public class GuardManagementLogin {
         stage.setTitle("Home");
         stage.setScene(scene);
     }
+
     public void debugTextfield(ActionEvent actionEvent) {
     }
 }

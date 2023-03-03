@@ -17,5 +17,13 @@ module com.pms.pmsproj {
     exports com.pms.pmsproj.Controller.AdminController;
     opens com.pms.pmsproj.Controller.AdminController to javafx.fxml;
     opens com.pms.pmsproj.Model.FinanceRecord to com.google.gson;
+    exports com.pms.pmsproj.Controller.ResidentController;
+    opens  com.pms.pmsproj.Controller.ResidentController to javafx.fxml;
+    exports com.pms.pmsproj.Controller.ManagerController;
+    opens  com.pms.pmsproj.Controller.ManagerController to javafx.fxml;
+    exports com.pms.pmsproj.Controller.AccountsController;
+    opens  com.pms.pmsproj.Controller.AccountsController to javafx.fxml;
+    exports com.pms.pmsproj.Controller.BuildingExecController;
+    opens  com.pms.pmsproj.Controller.BuildingExecController to javafx.fxml;
 
 }

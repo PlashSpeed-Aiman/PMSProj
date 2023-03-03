@@ -12,7 +12,7 @@
     <Label fx:id="welcomeText" text="Welcome to Genex PROPERTY MANAGEMENT SYSTEM (PMS)" />
    <HBox>
       <children>
-          <Button onAction="#onHelloButtonClick" text="Building Manager ">
+          <Button onAction="#onManagerButtonClick" text="Building Manager ">
             <HBox.margin>
                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
             </HBox.margin>
@@ -20,7 +20,7 @@
                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
             </padding>
          </Button>
-          <Button onAction="#onHelloButtonClick" text="Account Executive">
+          <Button onAction="#onAccountsButtonClick" text="Account Executive">
               <HBox.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
               </HBox.margin>
@@ -36,7 +36,7 @@
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
               </padding>
           </Button>
-          <Button onAction="#onHelloButtonClick" text="Building Executive">
+          <Button onAction="#onBuildingExecButtonClick" text="Building Executive">
               <HBox.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
               </HBox.margin>

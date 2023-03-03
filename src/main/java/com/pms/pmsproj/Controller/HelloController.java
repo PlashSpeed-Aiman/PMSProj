@@ -32,7 +32,7 @@ public class HelloController {
     }
 
     public void onSecurityButtonClicked(ActionEvent actionEvent) throws IOException {
-        FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("guard-management-view.fxml"));
+        FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("guard-login-view.fxml"));
         Stage stage = (Stage) container.getScene().getWindow();
         Scene scene = new Scene(loader.load());
         stage.setTitle("Dashboard");
@@ -40,14 +40,14 @@ public class HelloController {
     }
 
     public void onVendorButtonClicked(ActionEvent actionEvent) throws IOException {
-        FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("vendor-view.fxml"));
+        FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("vendor-login-view.fxml"));
         Stage stage = (Stage) container.getScene().getWindow();
         Scene scene = new Scene(loader.load());
         stage.setTitle("Dashboard");
         stage.setScene(scene);
     }
     public void onResidentButtonClicked(ActionEvent actionEvent) throws IOException {
-        FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("resident-view.fxml"));
+        FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("resident-login-view.fxml"));
         Stage stage = (Stage) container.getScene().getWindow();
         Scene scene = new Scene(loader.load());
         stage.setTitle("Dashboard");
@@ -55,7 +55,31 @@ public class HelloController {
     }
 
     public void onAdminButtonClicked(ActionEvent actionEvent) throws IOException {
-        FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("admin-view.fxml"));
+        FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("admin-login-view.fxml"));
+        Stage stage = (Stage) container.getScene().getWindow();
+        Scene scene = new Scene(loader.load());
+        stage.setTitle("Dashboard");
+        stage.setScene(scene);
+    }
+
+    public void onBuildingExecButtonClick(ActionEvent actionEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("buildingExec-login-view.fxml"));
+        Stage stage = (Stage) container.getScene().getWindow();
+        Scene scene = new Scene(loader.load());
+        stage.setTitle("Dashboard");
+        stage.setScene(scene);
+    }
+
+    public void onAccountsButtonClick(ActionEvent actionEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("account-login-view.fxml"));
+        Stage stage = (Stage) container.getScene().getWindow();
+        Scene scene = new Scene(loader.load());
+        stage.setTitle("Dashboard");
+        stage.setScene(scene);
+    }
+
+    public void onManagerButtonClick(ActionEvent actionEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("manager-login-view.fxml"));
         Stage stage = (Stage) container.getScene().getWindow();
         Scene scene = new Scene(loader.load());
         stage.setTitle("Dashboard");
