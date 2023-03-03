@@ -3,7 +3,6 @@ module com.pms.pmsproj {
     requires javafx.fxml;
     requires com.google.gson;
 
-
     exports com.pms.pmsproj;
     opens com.pms.pmsproj to javafx.fxml, com.google.gson;
     exports com.pms.pmsproj.Controller;
@@ -25,5 +24,6 @@ module com.pms.pmsproj {
     opens  com.pms.pmsproj.Controller.AccountsController to javafx.fxml;
     exports com.pms.pmsproj.Controller.BuildingExecController;
     opens  com.pms.pmsproj.Controller.BuildingExecController to javafx.fxml;
+    opens com.pms.pmsproj.Model.Complaints to com.google.gson;
 
 }

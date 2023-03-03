@@ -410,9 +410,9 @@
                                                                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                             </GridPane.margin></Label>
 
-                                                        <TextField fx:id="username" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                        <TextField fx:id="editResidentUsernameField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                                                         <Button mnemonicParsing="false" text="Edit" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="7" />
-                                                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                        <TextField fx:id="editResidentPasswordField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                                                         <Label text="Password" GridPane.rowIndex="2">
                                                             <GridPane.margin>
                                                                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />

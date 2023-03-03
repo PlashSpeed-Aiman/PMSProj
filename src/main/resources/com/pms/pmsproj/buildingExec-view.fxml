@@ -2,15 +2,162 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pms.pmsproj.Controller.BuildingExecController.BuildingViewController">
    <children>
-      <Button mnemonicParsing="false" text="Logout">
+      <Button mnemonicParsing="false" onAction="#logoutButtonClicked" text="Logout">
          <VBox.margin>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </VBox.margin>
       </Button>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+        <tabs>
+          <Tab closable="false" text="Assign Jobs">
+               <content>
+                  <SplitPane dividerPositions="0.5" prefHeight="160.0" prefWidth="200.0">
+                     <items>
+                        <ListView prefHeight="200.0" prefWidth="200.0" />
+                        <GridPane fx:id="" alignment="CENTER" prefHeight="500.0" prefWidth="622.0">
+                           <columnConstraints>
+                              <ColumnConstraints />
+                              <ColumnConstraints />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints />
+                              <RowConstraints />
+                              <RowConstraints />
+                              <RowConstraints />
+                              <RowConstraints />
+                              <RowConstraints />
+                           </rowConstraints>
+                           <children>
+                              <Label text="Employee ID" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <TextField fx:id="newComplaintTypeField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label text="Job" GridPane.rowIndex="3">
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <PasswordField fx:id="newComplaintDetailsField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Button mnemonicParsing="false" onAction="#onAssignJobButtonClicked" text="Assign Job To Employee" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
+                           </children>
+                        </GridPane>
+                     </items>
+                  </SplitPane>
+               </content>
+          </Tab>
+          <Tab closable="false" text="Jobs Dashboard">
+               <content>
+                  <SplitPane dividerPositions="0.5" prefHeight="160.0" prefWidth="200.0">
+                     <items>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <HBox prefHeight="20.0" prefWidth="297.0" spacing="10.0">
+                                 <children>
+                                    <TextField alignment="TOP_CENTER" promptText="Search Employee" />
+                                    <Button alignment="TOP_LEFT" contentDisplay="RIGHT" mnemonicParsing="false" text="Search" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <ListView prefHeight="311.0" prefWidth="224.0" VBox.vgrow="ALWAYS" />
+                           </children>
+                        </VBox>
+                        <GridPane fx:id="1" alignment="CENTER" prefHeight="500.0" prefWidth="622.0">
+                           <columnConstraints>
+                              <ColumnConstraints />
+                              <ColumnConstraints />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints />
+                              <RowConstraints />
+                              <RowConstraints />
+                              <RowConstraints />
+                              <RowConstraints />
+                              <RowConstraints />
+                           </rowConstraints>
+                           <children>
+                              <Label text="Employee ID" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <TextField fx:id="editEmployeeIdField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label text="Job" GridPane.rowIndex="3">
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <PasswordField fx:id="editEmployeeJobField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Button mnemonicParsing="false" onAction="#onEditJobButtonClicked" text="Edit Job" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
+                              <Button alignment="TOP_LEFT" mnemonicParsing="false" onAction="#onDeleteEmployee" text="Delete" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                           </children>
+                        </GridPane>
+                     </items>
+                  </SplitPane>
+               </content>
+          </Tab>
+            <Tab closable="false" text="Complaints">
+               <content>
+                  <SplitPane dividerPositions="0.5" prefHeight="160.0" prefWidth="200.0">
+                     <items>
+                        <ListView prefHeight="311.0" prefWidth="224.0" />
+                        <GridPane fx:id="11" alignment="CENTER" prefHeight="500.0" prefWidth="622.0">
+                           <columnConstraints>
+                              <ColumnConstraints />
+                              <ColumnConstraints />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints />
+                              <RowConstraints />
+                              <RowConstraints />
+                              <RowConstraints />
+                              <RowConstraints />
+                              <RowConstraints />
+                           </rowConstraints>
+                           <children>
+                              <Label text="Status" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <TextField fx:id="newComplaintTypeField11" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Button mnemonicParsing="false" onAction="#onChangeComplaintStatusButtonClicked" text="Change Status" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
+                           </children>
+                        </GridPane>
+                     </items>
+                  </SplitPane>
+               </content>
+            </Tab>
+            <Tab closable="false" text="Patrolling Schedule">
+               <content>
+                  <SplitPane dividerPositions="0.29797979797979796" prefHeight="160.0" prefWidth="200.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+                    </items>
+                  </SplitPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
    </children>
 </VBox>

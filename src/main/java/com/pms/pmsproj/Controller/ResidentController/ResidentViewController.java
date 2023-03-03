@@ -121,11 +121,28 @@ public class ResidentViewController implements Initializable {
     public void onDeleteComplaintButtonClicked(ActionEvent actionEvent) {
         int selectedID = listviewComplaints.getSelectionModel().getSelectedIndex();
         complaints.remove(selectedID);
+        try (PrintWriter out = new PrintWriter(new FileWriter("complaint.txt",false))) {
+            Gson gson = new Gson();
+            for (var complaint:complaints) {
+                String jsonString = gson.toJson(complaint);
+                out.write(jsonString+"\n");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public void onFileComplaintButtonClicked(ActionEvent actionEvent) {
-        complaints.add(new Complaint(newComplaintTypeField.getText(),newComplaintDetailsField.getText(),vendor.getId()));
+        var complaint = new Complaint(newComplaintTypeField.getText(),newComplaintDetailsField.getText(),vendor.getId());
+        complaints.add(complaint);
+        try (PrintWriter out = new PrintWriter(new FileWriter("complaint.txt",true))) {
+            Gson gson = new Gson();
+            String jsonString = gson.toJson(complaint);
+            out.write(jsonString+"\n");
 
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public void onGetDataButtonClicked(ActionEvent actionEvent) {

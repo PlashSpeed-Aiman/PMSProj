@@ -9,7 +9,7 @@ public class Complaint {
     public Complaint(String type,String details,String userId){
         this.complaintType = type;
         this.complaintDetail = details;
-        this.complaintDate = LocalDate.now();
+        this.complaintDate = LocalDate.now().toString();
         this.complaintStatus = "PENDING";
         this.complaintId = "complaint--"+complaintDate+"--"+userId;
         this.userId = userId;
@@ -18,7 +18,7 @@ public class Complaint {
 
     }
     private String complaintId = "";
-    private LocalDate complaintDate = LocalDate.now();
+    private String complaintDate = LocalDate.now().toString();
     private String complaintType = "";
     private String complaintDetail = "";
     private String complaintStatus = "";
@@ -33,11 +33,11 @@ public class Complaint {
         this.complaintId = complaintId;
     }
 
-    public LocalDate getComplaintDate() {
+    public String getComplaintDate() {
         return complaintDate;
     }
 
-    public void setComplaintDate(LocalDate complaintDate) {
+    public void setComplaintDate(String complaintDate) {
         this.complaintDate = complaintDate;
     }
 
